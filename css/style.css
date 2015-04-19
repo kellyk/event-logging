@@ -1,0 +1,58 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 10px;
+}
+
+.tweet-box {
+	background: #BFF1F6;
+	padding: 10px;
+	float: left;
+	border-radius: 5px;
+}
+.container {
+	width: 80%;
+	margin: 0 auto;
+	padding: 2em;
+	background: #fff;
+	min-height: 800px;
+}
+
+
+img {
+	margin: 5px 10px 0 0;
+	float: left;
+	display: inline-block;
+	border-radius: 5px;
+	width: 50px;
+}
+
+input {
+	font-size:18px;
+	padding: 5px;
+	width: 400px;
+	line-height: 40px;
+	border-radius: 5px;
+}
+
+button {
+	font-size:18px;
+	border: none;
+	line-height: 40px;
+	padding: 0.5em;
+	border-radius: 5px;
+	min-width: 100px;
+	color: #fff;
+	opacity: .85;
+	background: #00CADC;
+}
+
+button:hover {
+	opacity: 1;
+}
