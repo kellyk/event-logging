@@ -12,9 +12,9 @@ This currently logs to my personal google doc. To log events to your own Google 
 * Add four text fields: **id**, **element**, **type** and **action**
 
  ![Finding form id](/images/form.png)
-* Click **View form** to see your Google form, where you can find your specific form ids.
+* Click **View form** to see your Google form, where you can find your specific Google doc info. See [Adding Your Google Form Info](#googleform).
 * Replace the values in `js/log.js` with your own Google doc info.
-* Visit localhost:8888 and interact with the page. See [Adding Your Google Form Info](#googleform).
+* Visit localhost:8888 and interact with the page.
 * See results in your Google form
 
  ![Finding form id](/images/spreadsheet.png)
