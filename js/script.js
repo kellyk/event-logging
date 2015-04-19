@@ -1,25 +1,26 @@
+$(document).ready(function() {
+	logPageVisit();
+	addListeners();
+});
+
 var logPageVisit = function() {
 	var event = {
 		element: "page",
+		type: "home",
 		action: "visit"
 	};
 
 	log(event);
 };
 
-var logInteractions = function() {
-	$('[data-log]').on('click', function(e){
+var addListeners = function() {
+	$('#tweet-compose, #tweet-submit').on('click', function(e) {
 		var event = {
 			element: e.target.nodeName.toLowerCase(),
-			type: $(e.target).data('log'),
+			type: this.id,
 			action: e.type,
 		};
 
 		log(event);
 	});
 };
-
-$(document).ready(function() {
-	logPageVisit();
-	logInteractions();
-});

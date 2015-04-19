@@ -1,12 +1,14 @@
-function log(eventData) {
-  user = getCookie("userid") || "anonymous";
+var userid = getCookie("userid");
+var bucket = getCookie("placeholder_bucket");
 
+function log(eventData) {
   $.ajax({
     url: "https://docs.google.com/forms/d/1Z82-YJBGGOGdWIM3i1XeetZc-9Q5LsS5_JAl6-1wdCU/formResponse",
     data: {
-      "entry_1113866268" : user,
+      "entry_1611674180" : userid,
+      "entry_164936215" : bucket,
       "entry_1659896898" : eventData.element || "",
-      "entry_87429884": eventData.type || "",
+      "entry_87429884" : eventData.type || "",
       "entry_1864902988" : eventData.action || ""
       },
     type: "POST",
