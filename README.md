@@ -14,6 +14,16 @@ This currently logs to my personal google doc. To log events to your own Google 
  ![Finding form id](/images/form.png)
 * Click **View form** to see your Google form, where you can find your specific Google doc info. See [Adding Your Google Form Info](#googleform).
 * Replace the values in `js/log.js` with your own Google doc info.
+
+
+    $.ajax({
+      url: "https://docs.google.com/forms/d/<YOUR_FORM_ID>/formResponse",
+      data: {
+        "entry_<YOUR_INPUT_1>" : user,
+        "entry_<YOUR_INPUT_2>" : eventData.element || "",
+        "entry_<YOUR_INPUT_3>" : eventData.type || "",
+        "entry_<YOUR_INPUT_4>" : eventData.action || ""
+      },`
 * Visit localhost:8888 and interact with the page.
 * See results in your Google form
 
