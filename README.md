@@ -23,7 +23,7 @@ This currently logs to my personal google doc. To log events to your own Google 
         "entry_<YOUR_INPUT_2>" : eventData.element || "",
         "entry_<YOUR_INPUT_3>" : eventData.type || "",
         "entry_<YOUR_INPUT_4>" : eventData.action || ""
-      },`
+    }
 * Visit localhost:8888 and interact with the page.
 * See results in your Google form
 
@@ -32,8 +32,8 @@ This currently logs to my personal google doc. To log events to your own Google 
 
 ### <a name="googleform">Adding your Google form info</a>
 
-In `js/log.js` update the $.ajax method to replace my info with yours
+In `js/log.js` update the $.ajax method to replace my Google doc info with yours
 * The URL should look like this:  https://docs.google.com/forms/d/YOUR_FORM_ID/viewform
-* The data keys should be replaced with elements on your form, which can be found by inspecting the input fields and finding the ids
+* The data keys should be replaced with elements from your form, which can be found by inspecting the input fields and finding the ids
 
  ![Finding form id](/images/formids.png)
