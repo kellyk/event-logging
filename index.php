@@ -44,6 +44,8 @@
 		<input id="tweet-compose" type="text" placeholder="<?php echo $placeholder; ?>" />
 		<button id="tweet-submit">Tweet</button>
 	</div>
+  <ul class="display-events">
+  </ul>
 	</div>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/log.js"></script>

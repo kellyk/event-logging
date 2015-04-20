@@ -2,6 +2,8 @@ var userid = getCookie("userid");
 var bucket = getCookie("placeholder_bucket");
 
 function log(eventData) {
+  display(eventData);
+
   $.ajax({
     url: "https://docs.google.com/forms/d/1Z82-YJBGGOGdWIM3i1XeetZc-9Q5LsS5_JAl6-1wdCU/formResponse",
     data: {
@@ -14,6 +16,12 @@ function log(eventData) {
     type: "POST",
     dataType: "xml"
   });
+}
+
+function display(evt) {
+  var newEvent = $("<li></li>");
+  newEvent.html([evt.element, evt.type, evt.action].join(" : "));
+  $('.display-events').append(newEvent);
 }
 
 function getCookie(cname) {
