@@ -26,7 +26,7 @@
 
   // multiple code paths
   $in_experiment = $_COOKIE["placeholder_bucket"] == "in_experiment";
-  $placeholder = ($is_experiment_user) ? "'sup?" : "What's happening?";
+  $placeholder = ($in_experiment) ? "'sup?" : "What's happening?";
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,21 +34,21 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1">
 	<title>Logging Example</title>
-	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
 	<div class="container">
 		<h1>Logging Example</h1>
 	<div class="tweet-box">
-    <img src="images/avatar.jpeg" alt="avatar" />
+    <img src="./images/avatar.jpeg" alt="avatar" />
 		<input id="tweet-compose" type="text" placeholder="<?php echo $placeholder; ?>" />
 		<button id="tweet-submit">Tweet</button>
 	</div>
   <ul class="display-events">
   </ul>
 	</div>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/log.js"></script>
-	<script src="js/script.js"></script>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/log.js"></script>
+	<script src="./js/script.js"></script>
 </body>
 </html>
