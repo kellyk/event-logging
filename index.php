@@ -4,7 +4,10 @@
     setcookie("userid", rand(1, 1000000));
   }
 
-  if (!isset($_COOKIE["placeholder_bucket"])) {
+  if (isset($_COOKIE["placeholder_bucket"])) {
+    // if this is a return visitor, get bucket name from user cookie
+    $in_experiment = $_COOKIE["placeholder_bucket"] == "in_experiment";
+  } else {
     // if this is a new visitor, generate a random number
     // so we can decide whether to put them in the experiment
     $random = rand(1, 10);
@@ -12,6 +15,7 @@
     switch ($random) {
       case 1:
         $cookieValue = "in_experiment";
+        $in_experiment = true;
         break;
       case 2:
         $cookieValue = "in_control";
@@ -25,7 +29,6 @@
   }
 
   // multiple code paths
-  $in_experiment = $_COOKIE["placeholder_bucket"] == "in_experiment";
   $placeholder = ($in_experiment) ? "'sup?" : "What's happening?";
 ?>
 <!DOCTYPE html>
